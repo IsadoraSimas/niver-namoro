@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Casamento</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #e6e6fa; /* Lavanda */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            text-align: center;
+        }
+        h1 {
+            color: #800080; /* Roxo */
+            font-size: 2.5em;
+            margin: 20px;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #800080; /* Roxo */
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #4b0082; /* Índigo */
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #800080; /* Roxo */
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aceita casar comigo?</h1>
+    <div class="button-container">
+        <button id="yesButton">Sim</button>
+        <button id="noButton">Não</button>
+    </div>
+    <div id="messageYes" class="message">Você me fez a mulher mais feliz do mundo!</div>
+    <div id="messageNo" class="message">Tudo bem, ainda te amo!</div>
+
+    <script>
+        document.getElementById('yesButton').addEventListener('click', function() {
+            document.getElementById('messageYes').style.display = 'block';
+            document.getElementById('messageNo').style.display = 'none';
+        });
+
+        document.getElementById('noButton').addEventListener('click', function() {
+            document.getElementById('messageNo').style.display = 'block';
+            document.getElementById('messageYes').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
